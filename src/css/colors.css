@@ -1,0 +1,30 @@
+@import "./variables.css";
+
+.xdark {
+	background-color:var(--xdark);
+	color: var(--medium);
+}
+.dark {
+	background-color:var(--dark);
+	color: var(--medium);
+}
+
+.accent {
+	background-color:var(--accent);
+	color: var(--light);
+}
+
+.accent-light {
+	background-color:var(--accentLight);
+	color: var(--light);
+}
+
+.light {
+	background-color:var(--light);
+	color: var(--dark);
+}
+
+.gray {
+	background-color:var(--medium);
+	color: var(--dark);
+}

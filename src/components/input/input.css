@@ -1,0 +1,39 @@
+@import "../../css/variables.css";
+
+.input {
+	border: 1px solid gray;
+	font-size: var(--text-size-sm);
+	position: relative;
+	outline: none;
+	transition: all 0.25s ease-in-out;
+	padding: 0 var(--small-space);
+	height: var(--control-height);
+	line-height: var(--control-height);
+}
+
+.input.light {
+	border-color: var(--medium);
+}
+
+.input:focus {
+	z-index: 1;
+	background: red;
+}
+
+.input:hover {
+	z-index: 2;
+	background: green;
+}
+
+.input.active {
+	z-index: 1;
+	background: blue;
+}
+
+.input.disabled {
+	cursor: default;
+}
+
+.input.rounded {
+	border-radius: var(--rounded)
+}

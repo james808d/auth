@@ -1,0 +1,30 @@
+:root {
+	--dark:#222;
+	--xdark:#000;
+	--light:#f2f2f2;
+	--light2:#e0e0e0;
+	--medium:#ccc;
+	--medium2:#aaa;
+
+	--accent:rgb(80,40,255);
+	--accent2:rgb(120,90,255);
+	--accentLight:rgb(215,206,255);
+
+	--grid-unit: 8px;
+
+	--control-height: calc(4 * var(--grid-unit));
+	--control-height-lg: calc(5 * var(--grid-unit));
+	--control-height-sm: calc(3 * var(--grid-unit));
+
+	--navHeight: calc(7 * var(--grid-unit));
+
+	--space: calc(2 * var(--grid-unit));
+	--small-space: calc(var(--grid-unit));
+	--x-small-space: calc(0.5 * var(--grid-unit));
+
+	--text-size: calc(2 * var(--grid-unit));
+	--text-size-sm: calc(0.75 * var(--text-size));
+
+	--rounded: 2px;
+	--rounded-lg: 4px;
+}
