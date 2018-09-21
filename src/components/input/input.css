@@ -1,7 +1,8 @@
 @import "../../css/variables.css";
 
 .input {
-	border: 1px solid gray;
+	border-width: 1px;
+	border-style: solid;
 	font-size: var(--text-size-sm);
 	position: relative;
 	outline: none;
@@ -17,17 +18,14 @@
 
 .input:focus {
 	z-index: 1;
-	background: red;
 }
 
 .input:hover {
 	z-index: 2;
-	background: green;
 }
 
 .input.active {
 	z-index: 1;
-	background: blue;
 }
 
 .input.disabled {

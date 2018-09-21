@@ -33,7 +33,7 @@
 }
 
 .grid-gap {
-	grid-gap:var(--smallSpace);
+	grid-gap:var(--small-space);
 }
 
 @media(max-width:799px) {

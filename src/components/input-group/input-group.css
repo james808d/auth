@@ -1,0 +1,80 @@
+@import "../../css/variables.css";
+
+.input-group {
+	display: grid;
+	grid-template-columns: 33% auto;
+	grid-row-gap: 8px;
+	grid-column-gap: 8px;
+	max-width: 600px;
+	width: 100%;
+}
+
+.input-group.labels-on-top {
+	grid-template-columns: auto;
+}
+
+.input-group .inner {
+	grid-column: 2;
+}
+
+.input-group.labels-on-top .inner {
+	grid-column: 1;
+}
+
+.input-wrapper {
+
+}
+
+
+.input-group .clear-input-ctrl {
+	padding: 0 4px;
+	transition: all ease-in-out 200ms;
+	flex: 0;
+	align-self: center;
+}
+
+.input-group .error-message {
+	grid-column: 2 / 2;
+}
+
+.input-group .grid1 {
+	grid-column: 1 / 1;
+}
+
+.input-group .help-text {
+	grid-column: 2 / 2;
+	min-height: 14px;
+}
+
+.input-group .input-control-button {
+	flex: 0;
+	margin-left: 6px;
+}
+
+.input-group .label {
+	grid-column: 2 / 2;
+	align-self: center;
+}
+
+.input-group .label.grid1 {
+	align-self: start;
+}
+
+.input-group .label .optional {
+	font-size: 90%;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.input-group .label .asterisk {
+	color: var(--warning);
+	font-size: var(--text-size-lg);
+	margin-left: 4px
+}
+
+.input-group .validation {
+	padding: 0 4px;
+	width: 2rem;
+	position: relative;
+	flex: 0;
+}

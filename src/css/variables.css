@@ -6,9 +6,14 @@
 	--medium:#ccc;
 	--medium2:#aaa;
 
-	--accent:rgb(80,40,255);
-	--accent2:rgb(120,90,255);
-	--accentLight:rgb(215,206,255);
+	--aqua: rgb(110,212,255);
+	--purple: rgb(167,90,244);
+
+	--accent:rgb(55,0,255);
+	--accent-dark: rgb(33,31,109);
+	--accent-light:rgb(242,249,255);
+
+	--warning: rgb(255,0,0);
 
 	--grid-unit: 8px;
 
@@ -24,7 +29,12 @@
 
 	--text-size: calc(2 * var(--grid-unit));
 	--text-size-sm: calc(0.75 * var(--text-size));
+	--text-size-lg: calc(1.5 * var(--text-size));
 
-	--rounded: 2px;
-	--rounded-lg: 4px;
+	--rounded: 3px;
+	--rounded-lg: 6px;
+}
+
+.rounded {
+	border-radius: var(--rounded)
 }

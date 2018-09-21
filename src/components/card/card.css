@@ -1,0 +1,8 @@
+.card {
+	margin: 0 auto;
+	padding: var(--space);
+}
+
+.card-flex {
+	flex: 1;
+}

@@ -35,6 +35,7 @@ const Button = ({
 
 	const c = cn(
 		'button',
+		'plex',
 		theme,
 		`button-${theme}`,
 		{
