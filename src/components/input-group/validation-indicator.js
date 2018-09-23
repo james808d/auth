@@ -6,7 +6,7 @@ import Loading from '../loading';
 
 const ValidationIndicator = props => {
 
-	const showValidation = (props.touched && props.valueChanged) || props.submitFailed;
+	const showValidation = props.touched || props.submitFailed;
 
 	const complete = showValidation && !props.errors && props.hasValue && !props.isFocused;
 	const dirtyError = showValidation && !props.asyncValidating && !!props.errors;
@@ -49,7 +49,6 @@ ValidationIndicator.propTypes = {
 	submitFailed: PropTypes.bool,
 	touched: PropTypes.bool,
 	validateOnChange: PropTypes.bool,
-	valueChanged: PropTypes.bool,
 	white: PropTypes.bool
 };
 

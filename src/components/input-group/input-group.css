@@ -3,10 +3,15 @@
 .input-group {
 	display: grid;
 	grid-template-columns: 33% auto;
-	grid-row-gap: 8px;
+	grid-row-gap: 2px;
 	grid-column-gap: 8px;
 	max-width: 600px;
 	width: 100%;
+	font-size: var(--text-size-sm);
+}
+
+.input-group.debug div {
+	border: 1px solid rgba(255,0,0,0.5) !important;
 }
 
 .input-group.labels-on-top {
@@ -17,24 +22,26 @@
 	grid-column: 2;
 }
 
-.input-group.labels-on-top .inner {
-	grid-column: 1;
+.input-group .input {
+	flex: 1;
 }
-
-.input-wrapper {
-
-}
-
 
 .input-group .clear-input-ctrl {
-	padding: 0 4px;
 	transition: all ease-in-out 200ms;
 	flex: 0;
 	align-self: center;
+	position: absolute;
+	z-index: 1;
+	right: 0;
 }
 
 .input-group .error-message {
+	color: var(--warning);
 	grid-column: 2 / 2;
+}
+
+.input-group .warning{
+	color: var(--warning);
 }
 
 .input-group .grid1 {
@@ -52,8 +59,9 @@
 }
 
 .input-group .label {
-	grid-column: 2 / 2;
+	grid-column: 1;
 	align-self: center;
+	text-align: right;
 }
 
 .input-group .label.grid1 {
@@ -77,4 +85,18 @@
 	width: 2rem;
 	position: relative;
 	flex: 0;
+}
+
+.input-group .validation .material-icons {
+	vertical-align: middle;
+}
+
+.input-group.labels-on-top .inner
+{
+	grid-column: 1 / 1;
+}
+
+.input-group.labels-on-top .label {
+	grid-column: 1;
+	text-align: left;
 }

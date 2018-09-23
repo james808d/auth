@@ -24,6 +24,7 @@ const Button = ({
 	rounded,
 	showCaret,
 	theme,
+	transparent,
 	type,
 	value
 }) => {
@@ -41,7 +42,8 @@ const Button = ({
 		{
 			'active': active,
 			'disabled': disabled,
-			'rounded': rounded
+			'rounded': rounded,
+			'transparent': transparent
 		},
 		className
 	);

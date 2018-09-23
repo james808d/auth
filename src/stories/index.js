@@ -24,6 +24,8 @@ const formikProps = {
 	}
 };
 
+
+
 const getThemeKnob = () => selectV2('Theme',{
 	Light:'light',
 	Accent:'accent',
@@ -42,6 +44,20 @@ const buttonProps = {
 	passEvent: true,
 	className: 'test',
 	datakey: 'test-data-key'
+};
+
+const formikProps2 = {
+	field: {
+		name: 'test-name2',
+		value: 'test value'
+	},
+	form: {
+		touched:{},
+		errors:{}
+	},
+	onFocus: action('input-focus'),
+	theme: getThemeKnob(),
+	rounded: getRounded()
 };
 
 storiesOf('Button', module)
@@ -76,19 +92,28 @@ storiesOf('Card', module)
 storiesOf('Input', module)
 	.addDecorator(withKnobs)
 	.add('direct input', () => {
-		const value = text('Value', 'direct test value');
-		return (<Input rounded={getRounded()} onFocus={ action('input-focus')} value={value} theme={getThemeKnob()} />)
+
+		this.value = "test";
+
+		const updateValue = (e) => {
+			console.log(e.target.value);
+			this.value = e.target.value
+		};
+
+		return (<Input onChange={updateValue} rounded={getRounded()} onFocus={ action('input-focus')} value={this.value} theme={getThemeKnob()} />)
 	})
 	.add('with Formik', () => <Input rounded={getRounded()} onFocus={ action('input-focus')} {...formikProps} theme={getThemeKnob()} /> );
 
 
 storiesOf('InputGroup', module)
 	.addDecorator(withKnobs)
-	.add('with Formik', () =>
-		<InputGroup>
-			<Input rounded={getRounded()} onFocus={ action('input-focus')} {...formikProps} theme={getThemeKnob()} />
-		</InputGroup>
-	);
+	.add('InputGroup', () => {
+		const debug = boolean('Debug', false);
+		const labelsOnTop = boolean('Labels on Top', false);
+		return (
+			<InputGroup inputProps={ formikProps2 } className={ debug ? "debug" : ""} hasValue clearValue={ () => {} } label="test label" labelsOnTop={labelsOnTop} errors={["this is an error"]} touched />
+		);
+	});
 
 storiesOf('Section', module)
 	.add('light', () => <Section className="light" >Test</Section>)

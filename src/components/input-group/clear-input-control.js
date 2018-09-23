@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../button';
+import Icon from '../icon';
 
 const ClearInputControl = props => {
 
@@ -12,13 +13,13 @@ const ClearInputControl = props => {
 		<div style={style} className="clear-input-ctrl">
 			<Button
 				onClick={props.clearFunction}
-				icon={'clear'}
-				iconPadding={false}
 				padding={false}
 				transparent
 				theme={props.theme}
 				size={'sm'}
-			/>
+			>
+				<Icon icon="clear"/>
+			</Button>
 		</div>
 	);
 };

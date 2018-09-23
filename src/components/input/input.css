@@ -35,3 +35,7 @@
 .input.rounded {
 	border-radius: var(--rounded)
 }
+
+.input.has-clear-input-ctrl {
+	padding-right: 48px;
+}

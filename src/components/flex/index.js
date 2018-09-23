@@ -1,3 +1,3 @@
-import Flex from './flex.css';
+import Flex from './Flex';
 
 export default Flex;

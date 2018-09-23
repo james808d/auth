@@ -1,15 +1,15 @@
 :root {
-	--dark:#222;
+	--dark: rgb(10,15,30); /*#222;*/
 	--xdark:#000;
 	--light:#f2f2f2;
 	--light2:#e0e0e0;
-	--medium:#ccc;
+	--medium: rgb(19,35,48);
 	--medium2:#aaa;
 
 	--aqua: rgb(110,212,255);
 	--purple: rgb(167,90,244);
 
-	--accent:rgb(55,0,255);
+	--accent: rgb(55,0,255);
 	--accent-dark: rgb(33,31,109);
 	--accent-light:rgb(242,249,255);
 

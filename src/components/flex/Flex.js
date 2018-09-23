@@ -33,7 +33,7 @@ const getShrink = (shrink, basis) => {
 
 const getBasis = basis => {
 	if (basis) {
-		const suffix = typeof basis === 'number' || String(parseInt(basis as string, 10)) === basis ? 'px' : '';
+		const suffix = typeof basis === 'number' ? 'px' : '';
 		return basis + suffix;
 	}
 

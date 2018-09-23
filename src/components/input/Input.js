@@ -32,8 +32,7 @@ const Input = ({
 	theme,
 	timeOptions,
 	type,
-	value,
-	...rest
+	value
 }) => {
 
 	const _onBlur = field && field.onBlur || onBlur;
