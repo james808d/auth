@@ -23,6 +23,13 @@
 	border-color:var(--accent);
 }
 
+.white {
+	background-color: white;
+	color: var(--medium);
+	border-color: var(--light);
+}
+
+
 .light {
 	background-color:var(--light);
 	color: var(--medium);

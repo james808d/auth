@@ -11,7 +11,7 @@ const widths = {
 	xl: 800
 };
 
-const Card = ({ border, children, className, flex, margin, maxWidth, rounded, theme, width }) => {
+const Card = ({ border, children, className, flex, margin, maxWidth, padding, rounded, style:_style, theme, width }) => {
 
 	const c = cn(
 		'card',
@@ -19,14 +19,16 @@ const Card = ({ border, children, className, flex, margin, maxWidth, rounded, th
 		{
 			'border':border,
 			'card-flex':flex,
+			'card-padding':padding,
 			'rounded':rounded
 		},
 		className
 	);
 
 	const style = {
-		margin,
-		maxWidth: maxWidth ? widths[width] : 'none'
+		margin: margin,
+		maxWidth: maxWidth ? widths[width] : 'none',
+		..._style
 	};
 
 	return (
@@ -42,9 +44,11 @@ Card.propTypes = {
 	className: PropTypes.string,
 	flex: PropTypes.bool,
 	maxWidth: PropTypes.bool,
-	margin: PropTypes.number,
+	margin: PropTypes.string,
+	padding: PropTypes.bool,
 	rounded: PropTypes.bool,
 	shadow: PropTypes.bool,
+	style: PropTypes.object,
 	theme: PropTypes.string,
 	width: PropTypes.string
 };
@@ -52,6 +56,7 @@ Card.propTypes = {
 Card.defaultProps = {
 	margin: 0,
 	maxWidth: false,
+	padding: true,
 	rounded: true,
 	theme: 'white',
 	width: 'sm'

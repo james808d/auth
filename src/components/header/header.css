@@ -1,3 +1,10 @@
-.header {
+@import "../../css/variables.css";
 
+.header {
+	font-size: var(--text-size);
+	height: 32px;
+}
+
+.header a {
+	color: white; /*var(--medium2);*/
 }

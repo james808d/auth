@@ -1,0 +1,103 @@
+@import "../../css/variables.css";
+
+.plan-card {
+	box-shadow: 0 3px 16px rgba(0,0,0, 0.3);
+}
+
+.plan-card.not-available {
+	box-shadow: none;
+}
+
+.plan-card-top {
+	background:  var(--accent-light);
+	padding: var(--space) 0;
+	height: 160px;
+	color: var(--accent-dark);
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.plan-card-bottom {
+	background: white;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.plan-label {
+	color: var(--accent);
+	text-align: center;
+	font-size: var(--text-size);
+	letter-spacing: 1px;
+	font-weight: bold;
+	margin-bottom: var(--space);
+}
+
+.plan-available
+{
+	font-size: var(--text-size-sm);
+	line-height: var(--med-space);
+	height: var(--med-space);
+	margin-bottom: var(--space);
+}
+
+.plan-available-soon
+{
+	font-size: var(--text-size-sm);
+	background: rgba(0,0,0,0.05);
+	color: var(--medium2);
+	height: var(--med-space);
+	line-height: var(--med-space);
+	padding: 0 var(--space);
+	margin-bottom: var(--space);
+}
+
+.plan-price {
+	margin: var(--small-space) 0 0;
+	text-align: center;
+	font-size: var(--text-size-sm);
+}
+
+.plan-price-lg {
+	font-size: 30px;
+}
+
+.plan-features {
+	flex: 1;
+	padding: var(--space) var(--space) 0;
+}
+
+.plan-features ul {
+	margin: 0 0 0 var(--space);
+}
+
+.plan-features li
+{
+	color: var(--medium2);
+	font-size: var(--text-size-sm);
+	line-height: var(--line-size-sm);
+	margin-bottom: 0;
+	list-style: none;
+}
+
+.plan-features li:before {
+	/* For a round bullet */
+	content:'\2022';
+	display: block;
+	position: relative;
+	max-width: 0px;
+	max-height: 0px;
+	left: -16px;
+	top: -1px;
+	color: var(--accent-muted);
+	font-size: 16px;
+}
+
+.select-plan {
+	padding: var(--space);
+}
+
+.select-plan-btn {
+	display: block;
+	font-size: var(--text-size);
+	height: var(--large-space);
+}

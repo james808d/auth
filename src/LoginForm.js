@@ -4,7 +4,7 @@ import { Formik, Field } from 'formik';
 import Input from './components/input';
 import Button from './components/button';
 
-class Login extends Component {
+class LoginForm extends Component {
 	render() {
 		return (
 			<div>
@@ -30,4 +30,4 @@ class Login extends Component {
 	}
 }
 
-export default Login;
+export default LoginForm;

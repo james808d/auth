@@ -1,0 +1,15 @@
+@import "../../css/variables.css";
+
+.view {
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 16px;
+}
+
+.view.fill {
+	position: absolute;
+	top: var(--navHeight);
+	left:0;
+	right:0;
+	bottom:0;
+}

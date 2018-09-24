@@ -23,6 +23,7 @@ const Button = ({
 	passEvent,
 	rounded,
 	showCaret,
+	style,
 	theme,
 	transparent,
 	type,
@@ -59,7 +60,9 @@ const Button = ({
 			onMouseLeave={onMouseLeave}
 			type={type}
 			value={value}
-			disabled={disabled}>
+			disabled={disabled}
+			style={style}
+		>
 
 			{ showCaret && caretDirection === 'left' &&
 			<Caret
@@ -117,6 +120,7 @@ Button.propTypes = {
 	shadowTheme: PropTypes.string,
 	showCaret: PropTypes.bool,
 	size: PropTypes.oneOf(['sm','md','lg','xl']),
+	style: PropTypes.object,
 	tab: PropTypes.bool,
 	textTheme: PropTypes.string,
 	theme: PropTypes.string,

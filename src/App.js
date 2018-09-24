@@ -1,24 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
+import { Link, Route } from 'react-router-dom';
 
-import Login from './Login';
+import Header from './components/header'
+import LoginForm from './LoginForm';
+import Purchase from './Purchase';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-	      <Login />
-      </div>
-    );
-  }
+
+
+	render() {
+
+		const isAuth = false;
+
+		return (
+			<div className="app">
+				<Header isAuth={isAuth} />
+				<Route path="/login" component={LoginForm}/>
+				<Route path="/purchase" component={Purchase}/>
+			</div>
+		);
+	}
 }
 
-export default App;
+function mapStateToProps(state) {
+	return state;
+}
+
+export default connect(mapStateToProps, {
+
+})(App);

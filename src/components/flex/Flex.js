@@ -55,6 +55,7 @@ const Flex = ({
 	grow,
 	relative,
 	shrink,
+	style:_style,
 	vAlign,
 	wrap
 }) => {
@@ -73,11 +74,13 @@ const Flex = ({
 		alignItems,
 		alignContent,
 		alignSelf,
+		flexDirection: direction,
 		flexGrow: getGrow(grow),
 		flexShrink: getShrink(shrink, basis),
 		flexBasis: getBasis(basis),
 		flexWrap: wrap,
-		justifyContent
+		justifyContent,
+		..._style
 	};
 
 	return (
@@ -112,15 +115,17 @@ Flex.propTypes = {
 		PropTypes.number,
 		PropTypes.bool
 	]),
+	style: PropTypes.object,
 	vAlign: PropTypes.bool,
 	wrap: PropTypes.bool
 };
 
 Flex.defaultProps = {
-	alignContent: 'center',
-	alignItems: 'center',
+	alignContent: 'flex-start',
+	alignItems: 'flex-start',
 	direction: 'row',
-	justifyContent: 'center',
+	justifyContent: 'flex-start',
+	grow: 1
 };
 
 export default Flex;
