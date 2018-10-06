@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 
-const Icon = ({ color, fontSize, icon, lineHeight, opacity, style:_style }) => {
+const Icon = ({ children, className, color, fontSize, icon, lineHeight, opacity, style:_style, theme }) => {
 
 	const style = {
 		fontSize,
@@ -12,14 +13,23 @@ const Icon = ({ color, fontSize, icon, lineHeight, opacity, style:_style }) => {
 		..._style
 	};
 
+
+	const c = cn(
+		"material-icons",
+		theme,
+		className
+	);
+
 	return (
-		<span className="material-icons" style={style}>
-			{ icon }
+		<span className={c} style={style}>
+			{ icon || children }
 		</span>
 	);
 };
 
 Icon.propTypes = {
+	children: PropTypes.string,
+	className: PropTypes.string,
 	icon: PropTypes.string,
 	style: PropTypes.object,
 	color: PropTypes.string,
@@ -31,7 +41,8 @@ Icon.propTypes = {
 	lineHeight: PropTypes.oneOfType([
 		PropTypes.number,
 		PropTypes.string
-	])
+	]),
+	theme: PropTypes.string
 };
 
 Icon.defaultProps = {

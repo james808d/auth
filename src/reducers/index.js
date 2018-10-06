@@ -1,15 +1,29 @@
 import { combineReducers } from 'redux';
 import _ from 'lodash';
 
-const auth = (state={}, action) => {
+import { alert, authentication } from './auth';
+import { registration } from './registration';
+
+const app = (state={}, action) => {
 	switch(action.type) {
+
+		case 'SET_PLAN': {
+			return {
+				...state,
+				plan: action.payload
+			};
+		}
+
 		default:
 			return state;
 	}
 };
 
 const rootReducer = combineReducers({
-	auth
+	app,
+	alert,
+	authentication,
+	registration
 });
 
 export default rootReducer;

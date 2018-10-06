@@ -91,12 +91,9 @@ const Loading = (props) => {
 		};
 
 		return (
-			<AdaptiveContainer
-				display={props.display}>
-				<div style={style}>
-					{svg}
-				</div>
-			</AdaptiveContainer>
+			<div style={style}>
+				{svg}
+			</div>
 		);
 	}
 

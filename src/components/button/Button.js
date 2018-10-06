@@ -23,6 +23,7 @@ const Button = ({
 	passEvent,
 	rounded,
 	showCaret,
+	size,
 	style,
 	theme,
 	transparent,
@@ -40,6 +41,7 @@ const Button = ({
 		'plex',
 		theme,
 		`button-${theme}`,
+		`button-${size}`,
 		{
 			'active': active,
 			'disabled': disabled,
@@ -85,7 +87,6 @@ const Button = ({
 Button.propTypes = {
 	active: PropTypes.bool,
 	activeTheme: PropTypes.string,
-	animate: PropTypes.bool,
 	block: PropTypes.bool,
 	caretDirection: PropTypes.oneOf(['up','right','down','left']),
 	children: PropTypes.oneOfType([
@@ -131,7 +132,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-	animate: true,
 	caretDirection: 'left',
 	padding: true,
 	passEvent: false,

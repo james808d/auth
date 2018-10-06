@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import './view.css';
 
-const View = ({ children, className, theme, wrapperClass, wrapperStyle }) => {
+const View = ({ children, className, theme, width, wrapperClass, wrapperStyle }) => {
 
 	const w = cn(
 		"view-wrapper",
@@ -14,7 +14,8 @@ const View = ({ children, className, theme, wrapperClass, wrapperStyle }) => {
 
 	const c = cn(
 		"view",
-		className
+		className,
+		`view-${width}`
 	);
 
 	return (
@@ -30,8 +31,13 @@ View.propTypes = {
 	children: PropTypes.any,
 	className: PropTypes.string,
 	theme: PropTypes.string,
+	width: PropTypes.oneOf(['sm','md','lg']),
 	wrapperClass: PropTypes.string,
 	wrapperStyle: PropTypes.object
+};
+
+View.defaultProps = {
+	width: 'lg'
 };
 
 export default View;

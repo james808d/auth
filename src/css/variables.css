@@ -14,6 +14,8 @@
 	--accent-light:rgb(242,249,255);
 	--accent-muted: rgba(0,42,255,0.5);
 
+	--highlight: rgb(255,255,200);
+
 	--warning: rgb(255,0,0);
 
 	--grid-unit: 8px;
@@ -46,4 +48,8 @@
 
 .rounded {
 	border-radius: var(--rounded)
+}
+
+.small-text {
+	font-size: var(--text-size-sm);
 }

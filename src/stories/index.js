@@ -10,7 +10,7 @@ import '../css/colors.css';
 import Button from '../components/button';
 import Card from '../components/card';
 import Input from '../components/input';
-import InputGroup from '../components/input-group';
+import InputGroup from '../components/form/input-group';
 import Section from '../components/section';
 
 const formikProps = {

@@ -1,0 +1,39 @@
+.modal {
+	position: absolute;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	z-index: 1;
+}
+.overlay {
+	position: fixed;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	background: rgba(0,42,255, 0.8);
+	z-index: 2;
+}
+
+.modal .window {
+	position: absolute;
+	top: 100px;
+	margin:0 auto;
+	left:0;
+	right:0;
+	background: white;
+	z-index: 10;
+	width: 800px;
+	color: var(--dark);
+}
+
+.modal .window-lg {
+	max-width: 960px;
+}
+.modal .window-md {
+	max-width: 640px;
+}
+.modal .window-sm {
+	max-width: 480px;
+}

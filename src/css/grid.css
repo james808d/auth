@@ -1,43 +1,5 @@
-.matrix12 {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 8rem 3fr 1fr;
-}
+@import "./variables.css";
 
-.matrix12 .textArea {
-	grid-row: 2 / 2;
-	grid-column: 2 / 7;
-}
-
-.ipad {
-	height: 100vh;
-}
-
-.ipad .matrix12 {
-	height: 100%;
-	padding-top: 3rem;
-}
-
-.imagePanel {
-	object-fit: cover;
-	height: 100vh;
-	overflow: hidden;
-}
-
-.imagePanel img {
-
-}
-
-.row1 {
-	grid-template-rows: 1fr;
-}
-
-.grid-gap {
-	grid-gap:var(--small-space);
-}
-
-@media(max-width:799px) {
-	.matrix12 .textArea {
-		grid-column: 2 / 12;
-	}
+.pad {
+	padding: var(--space);
 }

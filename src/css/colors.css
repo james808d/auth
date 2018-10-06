@@ -65,3 +65,17 @@
 	border-color: var(--accent);
 	color: var(--accent);
 }
+.highlight {
+	background-color: var(--highlight);
+	border-color: var(--highlight);
+	color: var(--dark);
+}
+
+.no-border {
+	border-color: transparent;
+}
+
+.alert-danger {
+	background-color: var(--warning);
+	color: white;
+}

@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-const Label = ({ atTop, children, readOnly, required, showRequiredLabel, showOptionalLabel }) => {
+import './label.css';
+
+const Label = ({ atTop, boldLabels, children, readOnly, required, showRequiredLabel, showOptionalLabel }) => {
 
 	const c = cn(
 		"label",
 		{
-			'grid1': atTop
+			'grid1': atTop,
+			'bold': boldLabels
 		}
 	);
 
@@ -24,6 +27,7 @@ const Label = ({ atTop, children, readOnly, required, showRequiredLabel, showOpt
 
 Label.propTypes = {
 	atTop: PropTypes.bool,
+	boldLabels: PropTypes.bool,
 	children: PropTypes.any,
 	hasHelpText: PropTypes.bool,
 	readOnly: PropTypes.bool,

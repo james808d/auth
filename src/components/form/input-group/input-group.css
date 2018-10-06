@@ -1,11 +1,10 @@
-@import "../../css/variables.css";
+@import "../../../css/variables.css";
 
 .input-group {
 	display: grid;
 	grid-template-columns: 33% auto;
 	grid-row-gap: 2px;
 	grid-column-gap: 8px;
-	max-width: 600px;
 	width: 100%;
 	font-size: var(--text-size-sm);
 }
@@ -24,6 +23,10 @@
 
 .input-group .input {
 	flex: 1;
+}
+
+.input-group .input.inline-ctrl {
+	flex: 0;
 }
 
 .input-group .clear-input-ctrl {
@@ -58,28 +61,6 @@
 	margin-left: 6px;
 }
 
-.input-group .label {
-	grid-column: 1;
-	align-self: center;
-	text-align: right;
-}
-
-.input-group .label.grid1 {
-	align-self: start;
-}
-
-.input-group .label .optional {
-	font-size: 90%;
-	font-weight: normal;
-	font-style: italic;
-}
-
-.input-group .label .asterisk {
-	color: var(--warning);
-	font-size: var(--text-size-lg);
-	margin-left: 4px
-}
-
 .input-group .validation {
 	padding: 0 4px;
 	width: 2rem;
@@ -94,9 +75,4 @@
 .input-group.labels-on-top .inner
 {
 	grid-column: 1 / 1;
-}
-
-.input-group.labels-on-top .label {
-	grid-column: 1;
-	text-align: left;
 }

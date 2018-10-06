@@ -1,0 +1,13 @@
+@import "./css/variables.css";
+
+.form {
+	margin: 0 auto;
+	max-width: 480px;
+}
+
+.total-cost {
+	background: var(--accent-light);
+	color: var(--medium);
+	margin: 1rem 0;
+	padding: 0.5rem 1rem;
+}

@@ -1,0 +1,36 @@
+@import "../../css/variables.css";
+
+.label {
+
+}
+
+.input-group .label {
+	grid-column: 1;
+	align-self: center;
+	text-align: right;
+}
+
+.label.bold {
+	font-weight: bold;
+}
+
+.label.grid1 {
+	align-self: start;
+}
+
+.label .optional {
+	font-size: 90%;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.label .asterisk {
+	color: var(--warning);
+	font-size: var(--text-size-lg);
+	margin-left: 4px
+}
+
+.labels-on-top .label {
+	grid-column: 1;
+	text-align: left;
+}

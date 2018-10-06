@@ -1,0 +1,10 @@
+@import "../../css/variables.css";
+
+.fieldset {
+	max-width: 480px;
+	padding: var(--space);
+}
+
+.centered {
+	margin: 0 auto;
+}

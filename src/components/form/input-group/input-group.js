@@ -2,21 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-import Flex from '../flex';
+import Flex from '../../flex/index';
 import ValidationIndicator from './validation-indicator';
 import ClearInputControl from './clear-input-control';
-import Label from './label';
+import Label from '../label';
 import ErrorMessage from './error-message';
 import HelpText from './help-text';
-import Input from '../input';
+import Input from '../../input/index';
 
 import './input-group.css';
 
 const InputGroup = ({
 	asyncValidating,
+	boldLabels,
 	className,
 	clearValue,
 	errors,
+	field,
 	hasValue,
 	helpText,
 	inlineControl,
@@ -27,6 +29,7 @@ const InputGroup = ({
 	isFocused,
 	label,
 	labelsOnTop,
+	placeholder,
 	required,
 	readOnly,
 	readOnlyLabel,
@@ -34,11 +37,14 @@ const InputGroup = ({
 	showOptionalLabel,
 	showRequiredLabel,
 	showStatus,
+	style,
 	submitFailed,
 	theme,
 	touched,
 	type
 }) => {
+
+	const labelIsInline = type === "checkbox" || type === "radio";
 
 	const wrapper = cn(
 		"input-group",
@@ -49,16 +55,19 @@ const InputGroup = ({
 	);
 
 	const input = cn(
+		theme,
 		{
-			"has-clear-input-ctrl": !!clearValue
+			"has-clear-input-ctrl": !!clearValue,
+			"inline-ctrl": labelIsInline
 		}
 	);
 
 	return (
-		<div className={ wrapper }>
-			{ showLabel &&
+		<div className={ wrapper } style={style}>
+			{ showLabel && !labelIsInline &&
 			<Label
 				atTop={ labelsOnTop }
+				boldLabels={ boldLabels }
 				readOnly={readOnly}
 				required={required}
 				showOptionalLabel={showOptionalLabel}
@@ -71,7 +80,20 @@ const InputGroup = ({
 			<Flex className="inner" justifyContent={'flex-start'}>
 				<Flex alignItems={'stretch'} className="input-wrapper" grow>
 
-					<Input {...inputProps} className={input} />
+					<Input {...inputProps} {...field} className={input} type={type} placeholder={placeholder} readOnly={readOnly} />
+
+					{ labelIsInline &&
+					<Label
+						atTop={ false }
+						boldLabels={ boldLabels }
+						readOnly={readOnly}
+						required={required}
+						showOptionalLabel={showOptionalLabel}
+						showRequiredLabel={showRequiredLabel}
+					>
+						{ readOnly && readOnlyLabel ? readOnlyLabel : label }
+					</Label>
+					}
 
 					{ clearValue &&
 					<ClearInputControl
@@ -95,7 +117,6 @@ const InputGroup = ({
 					submitFailed={submitFailed}
 					touched={touched}
 					validateOnChange={type === 'select'}
-					white={ theme === 'whiteOnColor'}
 				/>
 				}
 			</Flex>
@@ -125,6 +146,7 @@ const InputGroup = ({
 InputGroup.propTypes = {
 	asyncValidating: PropTypes.bool,
 	className: PropTypes.string,
+	boldLabels: PropTypes.bool,
 	border: PropTypes.bool,
 	columns: PropTypes.string,
 	cornerRadius: PropTypes.oneOfType([
@@ -135,6 +157,7 @@ InputGroup.propTypes = {
 	disableHelpTextDisplay: PropTypes.bool,
 	errors: PropTypes.array,
 	errorTheme: PropTypes.string,
+	field: PropTypes.object,
 	fixedErrorHeight: PropTypes.bool,
 	fixedHelpTextHeight: PropTypes.bool,
 	fontSize: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
@@ -168,6 +191,7 @@ InputGroup.propTypes = {
 	showOptionalLabel: PropTypes.bool,
 	showRequiredLabel: PropTypes.bool,
 	showStatus: PropTypes.bool,
+	style: PropTypes.object,
 	submitFailed: PropTypes.bool,
 	theme: PropTypes.string,
 	touched: PropTypes.bool,
@@ -189,6 +213,7 @@ InputGroup.defaultProps = {
 	showLabel: true,
 	showRequiredLabel: true,
 	showStatus: true,
+	theme: 'dark',
 	type: 'text',
 	verticalMarginSize: 'sm'
 };

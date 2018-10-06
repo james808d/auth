@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../button';
-import Icon from '../icon';
+import Button from '../../button/index';
+import Icon from '../../icon/index';
 
 const ClearInputControl = props => {
 

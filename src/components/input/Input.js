@@ -167,7 +167,7 @@ const Input = ({
 		default:
 			return (
 				<input
-					type={'text'}
+					type={type}
 					{...fieldProps} />
 			);
 	}

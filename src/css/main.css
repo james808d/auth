@@ -5,14 +5,11 @@
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 	box-sizing: border-box;
 	text-rendering: optimizeLegibility;
-}
-
-.app {
-	background: var(--accent);
+	font-size: var(--text-size);
 }
 
 .hero-text {
-	color: rgba(255,255,255,0.2);
+	color: rgba(255,255,255,0.33);
 	font-weight: 200;
 	font-size: 60px;
 	text-align: center;
@@ -24,6 +21,13 @@ a {
 	color: var(--accent)
 }
 
+.alert {
+	padding: 8px 16px;
+}
+
+.react-tabs__tab {
+	margin-bottom: 0;
+}
 .plex {
 	font-family: 'IBM Plex Sans', monospace;
 }
@@ -35,11 +39,6 @@ a {
 .border {
 	border-width: 1px;
 	border-style: solid;
-}
-
-p, li {
-	font-size: 16px;
-	margin-bottom: 1.45rem;
 }
 
 body {

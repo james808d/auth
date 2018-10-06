@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-import Loading from '../loading';
+import Loading from '../../loading/index';
 
 const ValidationIndicator = props => {
 
