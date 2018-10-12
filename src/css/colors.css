@@ -29,6 +29,11 @@
 	border-color: var(--light);
 }
 
+.reversed {
+	background-color: white;
+	color: white;
+	border-color: white;
+}
 
 .light {
 	background-color:var(--light);

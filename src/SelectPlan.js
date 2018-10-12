@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { Transition } from 'react-spring'
 
-import { setPlan } from './actions/actions';
 import { PlanCard } from "./components/card";
 import Flex from "./components/flex";
 import View from "./components/view";
-import Button from './components/button/Button';
 
-import tiers from './constants/plans';
-import { Formik } from 'formik';
-
-import PurchaseForm from './PurchaseForm';
-
-class Purchase extends Component {
+export default class SelectPlan extends Component {
 
 	render() {
 
@@ -51,17 +41,7 @@ class Purchase extends Component {
 	}
 }
 
-Purchase.propTypes = {
+SelectPlan.propTypes = {
 	plan: PropTypes.string,
 	setPlan: PropTypes.func
 };
-
-function mapStateToProps(state) {
-	return {
-		plan: state.app.plan
-	};
-}
-
-export default connect(mapStateToProps, {
-	setPlan
-})(Purchase);

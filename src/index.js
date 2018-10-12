@@ -1,3 +1,4 @@
+import 'react-app-polyfill/ie11';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
@@ -14,10 +15,10 @@ import { Router } from 'react-router-dom'
 
 import { history } from './history';
 
-import { configureFakeBackend } from './auth/helpers/mock-backend';
+//import { configureFakeBackend } from './auth/helpers/mock-backend';
 const store = configureStore();
 
-configureFakeBackend();
+//configureFakeBackend();
 
 ReactDOM.render(
 	<Router history={history}>

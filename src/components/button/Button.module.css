@@ -19,16 +19,16 @@
 	z-index: 2;
 }
 
-.button.active {
+.active {
 	z-index: 1;
 }
 
-.button.disabled {
+.disabled {
 	cursor: default;
 	opacity: 0.5;
 }
 
-.button.transparent {
+.transparent {
 	background: transparent;
 	border-color: transparent;
 }

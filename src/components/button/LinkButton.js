@@ -1,63 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router'
-import cn from 'classnames';
-import Caret from '../caret/Caret';
-
-import './button.css';
 import Button from './Button';
-
 
 const LinkButton = (props) => {
 	const {
-		active,
-		disabled,
-		children,
-		className,
 		history,
-		location,
-		match,
-		name,
-		rounded,
-		staticContext,
 		to,
 		onClick,
-		size,
-		style,
-		theme,
-		type,
-		transparent,
-		value
+		...rest
 	} = props;
 
-	const c = cn(
-		'button',
-		'plex',
-		theme,
-		`button-${theme}`,
-		`button-${size}`,
-		{
-			'active': active,
-			'disabled': disabled,
-			'rounded': rounded,
-			'transparent': transparent
-		},
-		className
-	);
-
 	return (
-		<button
-			children={children}
-			className={c}
-			name={name}
+		<Button
 			onClick={(event) => {
 				onClick && onClick(event);
 				history.push(to)
 			}}
-			type={type}
-			value={value}
-			style={style}
-			disabled={disabled}
+			{ ...rest }
 		/>
 	)
 };

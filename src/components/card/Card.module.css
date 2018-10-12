@@ -1,6 +1,17 @@
-@import "../../css/variables.css";
+.card {
+	margin: 0 auto;
+	position: relative;
+}
 
-.plan-card {
+.flex {
+	flex: 1;
+}
+
+.padding {
+	padding: var(--space);
+}
+
+.shadow {
 	box-shadow: 0 3px 16px rgba(0,0,0, 0.3);
 }
 
@@ -8,7 +19,7 @@
 	box-shadow: none;
 }
 
-.plan-card-top {
+.top {
 	background:  var(--accent-light);
 	padding: var(--space) 0;
 	height: 160px;
@@ -17,13 +28,13 @@
 	border-top-right-radius: 3px;
 }
 
-.plan-card-bottom {
+.bottom {
 	background: white;
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 }
 
-.plan-label {
+.label {
 	color: var(--accent);
 	text-align: center;
 	font-size: var(--text-size);
@@ -51,26 +62,26 @@
 	margin-bottom: var(--space);
 }
 
-.plan-price {
+.price {
 	margin: var(--small-space) 0 0;
 	text-align: center;
 	font-size: var(--text-size-sm);
 }
 
-.plan-price-lg {
+.priceLg {
 	font-size: 30px;
 }
 
-.plan-features {
+.features {
 	flex: 1;
 	padding: var(--space) var(--space) 0;
 }
 
-.plan-features ul {
+.features ul {
 	margin: 0 0 0 var(--space);
 }
 
-.plan-features li
+.features li
 {
 	color: var(--medium2);
 	font-size: var(--text-size-sm);
@@ -79,7 +90,7 @@
 	list-style: none;
 }
 
-.plan-features li:before {
+.features li:before {
 	/* For a round bullet */
 	content:'\2022';
 	display: block;
@@ -92,11 +103,11 @@
 	font-size: 16px;
 }
 
-.select-plan {
+.selectPlan {
 	padding: var(--space);
 }
 
-.select-plan-btn {
+.selectPlanBtn {
 	display: block;
 	font-size: var(--text-size);
 	height: var(--large-space);

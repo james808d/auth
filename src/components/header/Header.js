@@ -23,12 +23,15 @@ const Header = ({ className, isAuth }) => {
 					<Flex alignItems="flex-start" justifyContent="flex-start">
 						<Link to="/">Company Name</Link>
 					</Flex>
-
 					<div>
-						<Link to="/login">{ isAuth ? 'Logout' : 'Login' }</Link>
+						{ process.env.NODE_ENV } /
+						{ process.env.REACT_APP_TEST }
 					</div>
 					<div style={{paddingLeft:16}}>
 						<Link to="/plans">Purchase Plan</Link>
+					</div>
+					<div style={{paddingLeft:16}}>
+						<Link to="/registration">Register</Link>
 					</div>
 				</Flex>
 			</View>

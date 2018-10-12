@@ -9,7 +9,8 @@
 	--aqua: rgb(110,212,255);
 	--purple: rgb(167,90,244);
 
-	--accent: rgb(0,42,255);   /*rgb(55,0,255);*/
+	--accent: rgb(29,149,27);   /* rgb(0,42,255);   rgb(55,0,255);*/
+
 	--accent-dark: rgb(33,31,109);
 	--accent-light:rgb(242,249,255);
 	--accent-muted: rgba(0,42,255,0.5);

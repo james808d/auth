@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import cn from 'classnames';
 
-import './card.css';
+import styles from './Card.module.css';
 
 const widths = {
 	sm: 400,
@@ -15,12 +15,12 @@ const widths = {
 const Card = ({ border, children, className, flex, margin, maxWidth, onClick, padding, rounded, style:_style, theme, to, width }) => {
 
 	const c = cn(
-		'card',
+		styles.card,
 		theme,
 		{
 			'border':border,
-			'card-flex':flex,
-			'card-padding':padding,
+			[styles.flex]:flex,
+			[styles.padding]:padding,
 			'rounded':rounded
 		},
 		className

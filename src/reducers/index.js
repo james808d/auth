@@ -7,13 +7,24 @@ import { registration } from './registration';
 const app = (state={}, action) => {
 	switch(action.type) {
 
-		case 'SET_PLAN': {
+		case 'SET_PLAN_DETAILS': {
 			return {
 				...state,
-				plan: action.payload
+				planDetails: action.payload
 			};
 		}
-
+		case 'SET_USER': {
+			return {
+				...state,
+				user: action.payload
+			};
+		}
+		case 'ERROR_USER': {
+			return {
+				...state,
+				user: action.payload
+			};
+		}
 		default:
 			return state;
 	}

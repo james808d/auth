@@ -4,9 +4,11 @@ import { Link, Route, withRouter, Switch } from 'react-router-dom';
 
 import Header from './components/header'
 import LoginForm from './LoginForm';
-import Purchase from './Purchase';
-import PurchaseForm from './PurchaseForm';
+import Purchase from './SelectPlan';
+import PurchaseForm from './CapturePlanDetails';
 import Registration from './RegistrationForm';
+import Thanks from './Thanks';
+import Validate from './Validate';
 
 import { alertActions } from './auth/actions/alert.actions';
 import { PrivateRoute } from './auth/PrivateRoute'
@@ -25,7 +27,7 @@ class App extends Component {
 		const locationChanged = nextProps.location !== this.props.location;
 
 		if(locationChanged) {
-			this.props.clear();
+			//this.props.clear();
 		}
 	}
 
@@ -51,6 +53,8 @@ class App extends Component {
 
 				<PrivateRoute exact path="/test" component={Test} passProps={{authentication:authentication}} />
 				<Route path="/registration" component={Registration} />
+				<Route path="/thank-you" component={Thanks} />
+				<Route path="/validate" component={Validate} />
 
 			</div>
 		);

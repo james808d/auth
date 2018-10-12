@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import Caret from '../caret/Caret';
 
-import './button.css';
+import styles from './Button.module.css';
 
 const Button = ({
 	active,
@@ -37,16 +37,16 @@ const Button = ({
 	};
 
 	const c = cn(
-		'button',
+		styles.button,
 		'plex',
 		theme,
-		`button-${theme}`,
-		`button-${size}`,
+		styles[`button-${theme}`],
+		styles[`button-${size}`],
 		{
-			'active': active,
-			'disabled': disabled,
+			[styles.active]: active,
+			[styles.disabled]: disabled,
+			[styles.transparent]: transparent,
 			'rounded': rounded,
-			'transparent': transparent
 		},
 		className
 	);
